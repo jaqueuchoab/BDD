@@ -1,0 +1,13 @@
+# Ignorar arquivos de build e cache do projeto principal
+/DoceFidelidade/bin/
+/DoceFidelidade/obj/
+
+# Ignorar arquivos de build e cache do projeto de testes
+/DoceFidelidade.Tests/bin/
+/DoceFidelidade.Tests/obj/
+
+# Ignorar arquivos específicos de cache do NuGet (caso deseje ser mais explícita)
+/DoceFidelidade/obj/*.nuget.*
+/DoceFidelidade.Tests/obj/*.nuget.*
+/DoceFidelidade/obj/project.*
+/DoceFidelidade.Tests/obj/project.*
