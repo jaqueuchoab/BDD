@@ -1,22 +1,24 @@
 using System;
 namespace DoceFidelidade.Models;
 
-public class Client {
-  private int _id = new Random().Next(1000, 9999);
+public class Administrator {
+  private int _id = new Random.next(1000, 9999);
   private string _name;
   private string _email;
   private string _phone;
+  private string _password;
+  private boolean _isAdmin = true;
   private DateTime _createdAt;
 
-  public Client(string name, string email, string phone) {
+  public Administrator(string name, string email, string phone, string password) {
     this._name = name;
     this._email = email;
     this._phone = phone;
+    this._password = password;
     this._createdAt = DateTime.Now;
   }
 
   // Métodos de acesso
-
   public int Id {
     get => _id;
   }
@@ -40,6 +42,7 @@ public class Client {
       _email = value;
     }
   }
+
   public string Phone {
     get => _phone;
     set {
@@ -49,6 +52,21 @@ public class Client {
       _phone = value;
     }
   }
+
+  public string Password {
+    get => _password;
+    set {
+      if (string.IsNullOrWhiteSpace(value)) {
+        throw new ArgumentException("Password cannot be empty or whitespace.", nameof(value));
+      }
+      _password = value;
+    }
+  }
+
+  public bool IsAdmin {
+    get => _isAdmin;
+  }
+
   public DateTime CreatedAt {
     get => _createdAt;
   }

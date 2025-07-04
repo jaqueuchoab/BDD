@@ -5,6 +5,7 @@ using DoceFidelidade.Services;
 namespace DoceFidelidade.Tests;
 
 [Story(
+    Title = "Client registration",
     AsA = "As a Doce Encanto customer",
     IWant = "I want to be able to register on DoceFidelidade",
     SoThat = "So that I can access the app's benefits"
@@ -17,7 +18,7 @@ public class ClientRegister {
 
     [Given("the client has correctly filled in the data")]
     public void GivenCreateValidClient() {
-        _client = new Client(1, "Jasmin", "jasmin@gmail.com", "(88) 99654-4536");
+        _client = new Client("Jasmin", "jasmin@gmail.com", "(88) 99654-4536");
     }
 
     [When("the client submits the registration data")]
@@ -34,7 +35,7 @@ public class ClientRegister {
     }
 
     [Fact]
-    public void ExecutingScenarioRegister()
+    public void ExecutingScenarioClientRegister()
     {
         this.BDDfy();
     }

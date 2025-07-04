@@ -1,5 +1,6 @@
 namespace DoceFidelidade.Services;
 using DoceFidelidade.Models;
+using DoceFidelidade.Utils;
 
 public class ClientService {
   // Armazenamento de Clientes
@@ -58,5 +59,17 @@ public class ClientService {
     // Remova todos os itens da lista que possuem o mesmo Id do cliente a ser removido
     _clients.RemoveAll(clientItem => clientItem.Id == client.Id);
 
+  }
+
+  public bool ValidateCode(string code) {
+    if (string.IsNullOrWhiteSpace(code)) {
+      throw new ArgumentException("Code cannot be null or empty.", nameof(code));
+    }
+
+    if(!CodeGenerator.IsValidCode(code)) {
+      throw new ArgumentException("Invalid code format.", nameof(code));
+    } else {
+      return CodeGenerator.IsValidCode(code);
+    }
   }
 }

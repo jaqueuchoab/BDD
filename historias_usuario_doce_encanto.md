@@ -3,31 +3,35 @@
 
 ---
 
-### 1. Coleta de Feedback
-
-**Como** confeiteira preocupada com o feedback dos meus clientes  
-**Quero** coletar a experiência do cliente com meus doces *(o que achou do produto e nota 1-10)*  
-**Para** verificar a média de satisfação da clientela no geral  
+### 1. Cadastro de Clientes (ClientRegister.Tests.cs)
+**Como** um cliente da Doce Encanto
+**Quero** poder me cadastrar no DoceFidelidade
+**Para** ter acesso aos benefícios do aplicativo
 
 ---
 
-### 2. Acúmulo de Pontos
+### 2. Acúmulo de Pontos e Coleta de Feedback (FeedbackRegister.Tests.cs)
 
-**Como** cliente da Doce Encanto  
-**Quero** receber pontos acumulativos por compras  
-**Para** receber brindes/descontos  
+**Como** cliente da Doce Encanto 
+**Quero** deixar feedbacks de uma compra  *(o que achou do produto e nota 1-10)*  
+**Para** melhorar os produtos da doceria
 
 ---
 
 ### 3. Validação de Código de Fidelidade
 
-**Como** dona da Doce Encanto  
-**Quero** validar código de fidelidade  
+**Como** cliente da Doce Encanto  
+**Quero** validar código de fidelidade e
+**Quero** receber pontos acumulativos por ele  
 **Para** garantir que os pontos sejam dados ao cliente  
 
 ---
 
-### 4. Cadastro de Clientes 
-**Como** um cliente da Doce Encanto
-**Quero** poder me cadastrar no DoceFidelidade
-**Para** ter acesso aos benefícios do aplicativo
+### 4. Visualização de satisfação de clientes
+
+**Como** confeiteira preocupada com o feedback dos meus clientes  
+**Quero** visualizar avaliações sobre meus produtos 
+**Para** verificar a média de satisfação da clientela no geral  
+
+---
+
