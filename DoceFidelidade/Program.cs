@@ -5,7 +5,7 @@ using DoceFidelidade.Services;
 public class Program {
   public static void Main(string[] args) {
     Client client = null;
-    Administrador admin = null;
+    Administrator admin = null;
     ClientService clientService = new ClientService();
     FeedbackService feedbackService = new FeedbackService();
     int option = 0;
@@ -55,7 +55,7 @@ public class Program {
               Console.WriteLine($"ID: {c.Id}, Nome: {c.Name}, Email: {c.Email}, Telefone: {c.Phone}\n");
             }
           } else {
-            Console.WriteLine("\nApenas administradores podem listar clientes")
+            Console.WriteLine("\nApenas administradores podem listar clientes");
           }
           break;
         case 3:

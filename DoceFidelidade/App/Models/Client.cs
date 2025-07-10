@@ -6,12 +6,14 @@ public class Client {
   private string _name;
   private string _email;
   private string _phone;
+  private int _points;
   private DateTime _createdAt;
 
   public Client(string name, string email, string phone) {
     this._name = name;
     this._email = email;
     this._phone = phone;
+    this._points = 0;
     this._createdAt = DateTime.Now;
   }
 
@@ -49,6 +51,17 @@ public class Client {
       _phone = value;
     }
   }
+
+  public int Points {
+    get => _points;
+    set {
+      if (value < 0) {
+        throw new ArgumentException("Points cannot be negative.", nameof(value));
+      }
+      _points = value;
+    }
+  }
+
   public DateTime CreatedAt {
     get => _createdAt;
   }

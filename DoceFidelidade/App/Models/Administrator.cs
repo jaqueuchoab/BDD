@@ -2,12 +2,12 @@ using System;
 namespace DoceFidelidade.Models;
 
 public class Administrator {
-  private int _id = new Random.next(1000, 9999);
+  private int _id = new Random().Next(1000, 9999);
   private string _name;
   private string _email;
   private string _phone;
   private string _password;
-  private boolean _isAdmin = true;
+  private bool _isAdmin = true;
   private DateTime _createdAt;
 
   public Administrator(string name, string email, string phone, string password) {

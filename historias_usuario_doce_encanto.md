@@ -25,13 +25,4 @@
 **Quero** receber pontos acumulativos por ele  
 **Para** garantir que os pontos sejam dados ao cliente  
 
----
-
-### 4. Visualização de satisfação de clientes
-
-**Como** confeiteira preocupada com o feedback dos meus clientes  
-**Quero** visualizar avaliações sobre meus produtos 
-**Para** verificar a média de satisfação da clientela no geral  
-
----
 

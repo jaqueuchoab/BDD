@@ -3,11 +3,11 @@ using DoceFidelidade.Models;
 using DoceFidelidade.Utils;
 namespace DoceFidelidade.Services;
 
-public class AdministradorService {
+public class AdministratorService {
   List<Administrator> administrators = new List<Administrator>();
 
   // Create/Add novo administrador
-  public void CreateAdmin(Administrator admin) {
+  public void AddAdmin(Administrator admin) {
     if (admin == null) {
       throw new ArgumentNullException(nameof(admin), "Administrator cannot be null.");
     }
@@ -62,7 +62,7 @@ public class AdministradorService {
     administrators.RemoveAll(adminItem => adminItem.Id == admin.Id);
   }
 
-  public string GenerateCode() {
+  public string AdmGenerateCode() {
     string code = CodeGenerator.GenerateCode();
     return code;
   }

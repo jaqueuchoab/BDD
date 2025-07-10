@@ -69,7 +69,20 @@ public class ClientService {
     if(!CodeGenerator.IsValidCode(code)) {
       throw new ArgumentException("Invalid code format.", nameof(code));
     } else {
+      // Adiciona pontos ao cliente se o código for válido
       return CodeGenerator.IsValidCode(code);
+    }
+  }
+
+  public void AddPointsToClient(Client client) {
+    if(client == null) {
+      throw new ArgumentNullException(nameof(client), "Client cannot be null");
+    }
+
+    foreach (var clientItem in _clients) {
+      if(clientItem.Id.Equals(client.Id)) {
+        client.Points += 10;
+      }
     }
   }
 }

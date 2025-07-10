@@ -23,14 +23,18 @@ public class CodeGenerator {
     return code;
   }
 
+  // Valida o código de fidelidade
   public static bool IsValidCode(string code) {
+    // Corta o código da posição em diante e guardar os próximos 4 digitos
     string digitos = code.Substring(4, 4);
     int sum = 0;
 
+    // Somatório dos 4 dígitos
     for (int i = 0; i < digitos.Length; i++) {
       sum += int.Parse(digitos[i].ToString());
     }
 
+    // Verifica se a soma é par, se o código começa com 'DOCE' e se tem 8 caracteres, caracterizando um código válido
     return sum % 2 == 0 && code.StartsWith("DOCE") && code.Length == 8;
   }
 }
